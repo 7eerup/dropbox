@@ -6,7 +6,7 @@ import Logo from "components/logo";
 import SearchComponent from "components/search-component";
 import { useState } from "react";
 
-export default function Home() {
+export default function UI() {
   const [searchInput, setSearchInput] = useState("")
   return (
   <main className="w-full p-2 flex flex-col gap-4">
@@ -24,7 +24,7 @@ export default function Home() {
     <FileDragDropZone />
 
     {/* Dropbox Image List */}
-    <DropboxImageList />
+    <DropboxImageList searchInput={searchInput} />
 
   </main>
   );
